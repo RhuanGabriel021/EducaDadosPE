@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EducaDadosPE - Resultado</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <style>
+
+    .navbar-custom {
+      background: linear-gradient(90deg, #0d6efd, #6610f2);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .navbar-brand {
+      color: white !important;
+      font-weight: 600;
+      font-size: 1.35rem;
+    }
+    .navbar-brand i { color: white; margin-right: 8px; }
+    .navbar-nav .nav-link {
+      color: white !important;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    .navbar-nav .nav-link:hover {
+      color: #ffc107 !important;
+    }
+
+    h2 {
+      color: #0d6efd;
+      font-weight: 700;
+      margin-top: 40px;
+      margin-bottom: 15px;
+    }
+    h5 {
+      color: #0d6efd;
+      font-weight: 600;
+      margin-top: 8px;
+    }
+
+    .summary-card {
+      background: #fff;
+      border: 1px solid #dee2e6;
+      border-radius: 15px;
+      padding: 20px;
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+    .summary-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .summary-card i {
+      font-size: 2rem;
+      color: #0d6efd;
+      margin-bottom: 10px;
+    }
+
+    canvas {
+      max-width: 100%;
+      height: 160px !important;
+    }
+
+    footer {
+      background: linear-gradient(90deg, #0d6efd, #6610f2);
+      color: white;
+      text-align: center;
+      padding: 25px 0;
+      margin-top: 60px;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand" href="PaginaInicial.html">
+        <i class="bi bi-book-half"></i> EducaDadosPE
+      </a>
+      <button class="navbar-toggler text-white border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="PaginaInicial.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link active" href="Comparacoes.html">Comparações</a></li>
+          <li class="nav-item"><a class="nav-link active" href="Sobre.html">Sobre</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container my-5">
+    <h2>Acesso</h2>
+    <p>
+      Atendimento escolar: em 2019, a frequência escolar entre 15–17 anos em PE é alta, com recortes que mostram desigualdades (p. ex., 95,4% entre jovens brancos, 99,7% pretos e 89,4% pardos). Na educação infantil (0–3 anos), a taxa é bem menor e com forte desigualdade por renda (66,7% no quartil mais rico vs. 27,3% no mais pobre).
+
+      Oferta e vagas: há política de reordenamento da rede para reduzir vagas ociosas e aumentar eficiência de uso da capacidade física das escolas, conforme normativas (CEE nº 03/2006 e IN de Matrícula SEE nº 04/2022).
+
+      Ensino técnico e integral: 36.521 estudantes com matrícula ativa na Educação Profissional presencial; 9.885 novas vagas em 32 cursos técnicos integrados nas ETEs; 12.705 vagas subsequentes. Também houve oferta intercomplementar do NEM em 9 municípios, via SENAI-PE.
+    </p>
+
+    <h2>Trajetória</h2>
+    <p>
+      Abandono: tendência de queda do abandono de 2020 a 2023 nos anos iniciais, finais e ensino médio — associada às políticas intensificadas a partir de 2022.
+
+      Distorção idade-ano:
+
+      Anos iniciais: redução de 15,8% (2020) para 10,8% (2023), queda de ~5 p.p. (-32%), melhor que a média nacional.
+
+      Anos finais: queda próxima da média do Brasil no quadriênio 2020–2023 (PE 23,4% vs. BR 25%).
+
+      Ensino médio: distorção menor que a nacional em 2023 (PE 20,3% vs. BR 21,6%).
+
+      Conclusão aos 19 anos: taxa subiu de 41% (2012) para 66,3% (2022), 12º maior do país, mas estagnada desde 2018.
+    </p>
+
+    <h2>Aprendizagem</h2>
+    <p>
+      IDEB (rede estadual): PE cumpriu as metas vigentes (últimas publicadas para 2021) e manteve avanço no quadriênio. Resultados do IDEB (2017→2023):
+
+      Anos iniciais: 4,9 → 6,2
+
+      Anos finais: 4,5 → 4,9
+
+      Ensino médio: 4,0 → 4,5.
+
+      No EM, PE já alcançava a média nacional em 2019 e manteve-se em 2023; em 2021, IDEB EM PE 4,4 vs. BR 3,9.
+
+      SAEB/SAEPE: o SAEB/SAEPE subsidia diagnóstico e políticas; em 2023, participação de 110.862 estudantes da rede estadual (868 escolas; 3.300 turmas).
+
+      Adequação da aprendizagem (2019, concluintes EM): LP 38,2% e Matemática 10,6% em PE (acima da média BR), mas com grande desigualdade entre redes (privada vs pública).
+    </p>
+
+    <div class="row justify-content-center text-center mt-5 g-4">
+      <div class="col-md-4">
+        <div class="summary-card">
+          <i class="bi bi-person-lines-fill"></i>
+          <h5>Frequência Escolar</h5>
+          <canvas id="graficoAcesso"></canvas>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="summary-card">
+          <i class="bi bi-graph-up-arrow"></i>
+          <h5>Distorção Idade-Ano</h5>
+          <canvas id="graficoTrajetoria"></canvas>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="summary-card">
+          <i class="bi bi-mortarboard"></i>
+          <h5>Evolução IDEB</h5>
+          <canvas id="graficoAprendizagem"></canvas>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Indicadores da Educação - Pernambuco</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script>
+
+    new Chart(document.getElementById('graficoAcesso'), {
+      type: 'bar',
+      data: {
+        labels: ['15–17 anos', 'Infantil (Rico)', 'Infantil (Pobre)'],
+        datasets: [{
+          label: 'Taxa (%)',
+          data: [97, 66.7, 27.3],
+          backgroundColor: ['#0d6efd', '#6f42c1', '#20c997']
+        }]
+      },
+      options: { plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true } } }
+    });
+
+    new Chart(document.getElementById('graficoTrajetoria'), {
+      type: 'line',
+      data: {
+        labels: ['2020', '2021', '2022', '2023'],
+        datasets: [{
+          label: 'Anos Iniciais',
+          data: [15.8, 13.5, 12.0, 10.8],
+          borderColor: '#0d6efd',
+          tension: 0.3
+        }, {
+          label: 'Ensino Médio',
+          data: [24.5, 22.0, 21.0, 20.3],
+          borderColor: '#6610f2',
+          tension: 0.3
+        }]
+      },
+      options: { scales: { y: { beginAtZero: true } } }
+    });
+
+    new Chart(document.getElementById('graficoAprendizagem'), {
+      type: 'line',
+      data: {
+        labels: ['2017', '2019', '2021', '2023'],
+        datasets: [
+          { label: 'Anos Iniciais', data: [4.9,5.0,5.3,6.2], borderColor: '#0d6efd', tension: 0.3 },
+          { label: 'Anos Finais', data: [4.5,4.7,4.8,4.9], borderColor: '#6610f2', tension: 0.3 },
+          { label: 'Ensino Médio', data: [4.0,4.4,4.4,4.5], borderColor: '#20c997', tension: 0.3 }
+        ]
+      },
+      options: { scales: { y: { beginAtZero: true } } }
+    });
+  </script>
+</body>
+</html>

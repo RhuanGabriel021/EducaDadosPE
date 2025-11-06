@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EducaDadosPE - Matrículas</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    
+    .navbar-custom {
+      background: linear-gradient(90deg, #0d6efd, #6610f2);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .navbar-brand { color: white !important; font-weight: 600; font-size: 1.35rem; }
+    .navbar-brand i { color: white; margin-right: 8px; }
+    .navbar-nav .nav-link { color: white !important; font-weight: 500; transition: color 0.3s; }
+    .navbar-nav .nav-link:hover { color: #ffc107 !important; }
+
+    main {
+      max-width: 960px;
+      margin: 60px auto 80px auto;
+      padding: 0 15px;
+    }
+    main h2 { color: #0d6efd; font-weight: 600; margin-top: 40px; margin-bottom: 20px; }
+    main p { text-align: justify; line-height: 1.75; color: #333; margin-bottom: 25px; font-size: 1.05rem; }
+
+    .summary-section { margin-top: 50px; }
+    .summary-card {
+      background: white;
+      border: 1px solid #dee2e6;
+      border-radius: 15px;
+      box-shadow: 0 0 0 rgba(0,0,0,0);
+      transition: transform 0.25s, box-shadow 0.25s;
+      text-align: center;
+      padding: 25px 20px;
+    }
+    .summary-card:hover { transform: translateY(-3px); box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+    .summary-icon { font-size: 2rem; color: #6610f2; margin-bottom: 10px; }
+    .summary-card h5 { font-weight: 600; color: #0d6efd; margin-bottom: 6px; font-size: 1.15rem; }
+    .summary-card p { margin: 0; font-size: 1rem; font-weight: 500; color: #444; }
+    .summary-card small { display: block; margin-top: 6px; color: #6c757d; font-size: 0.9rem; }
+
+    .summary-card canvas { margin-top: 15px; }
+
+    footer {
+      background: linear-gradient(90deg, #0d6efd, #6610f2);
+      color: white; text-align: center; padding: 25px 0; margin-top: 60px; font-weight: 500;
+    }
+
+    @media (max-width: 768px) {
+      .summary-card { padding: 20px 15px; }
+      .summary-icon { font-size: 1.8rem; }
+      .summary-card h5 { font-size: 1.1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand" href="PaginaInicial.html">
+        <i class="bi bi-book-half"></i> EducaDadosPE
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="PaginaInicial.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="Comparacoes.html">Comparações</a></li>
+          <li class="nav-item"><a class="nav-link" href="Sobre.html">Sobre</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container my-5">
+    <h2>Matrículas</h2>
+    <p>Pernambuco tinha cerca de 2,2 milhões de matrículas (total do estado nas etapas da educação básica destacadas no material). 
+    Na rede estadual, o Censo Escolar registrou 539.212 matrículas em 2023, uma queda de ~3,6% vs. 2022; no agregado do estado (todas as redes), 2021→2023 ficou praticamente estável (+0,5%).</p>
+
+    <h2>Escolas</h2>
+    <p>A rede estadual de Pernambuco soma 1.059 edificações (1.053 escolas e 6 centros). Em 2023, 61 unidades migraram para Escola de Referência, e o estado passou a contar com 637 escolas de jornada integral — cerca de 60% da rede — sendo 58 Escolas Técnicas e 579 Escolas de Referência (cargas de 35h e 45h conforme a etapa). Educação profissional: 58 ETE em 43 municípios, 49 cursos e 36.521 matrículas presenciais. Infraestrutura: 68% laboratórios, 86% bibliotecas, 61% quadras.</p>
+
+    <h2>Professores</h2>
+    <p>A SEE/PE encerrou 2023 com 36.639 docentes (20.547 efetivos e 16.092 temporários). Vínculos temporários: 15.210 (2020) → 17.021 (2021) → 19.033 (2022) → 16.092 (2023); em 2023 houve redução dos temporários e aumento dos efetivos. Formação: Especialização 62,14%; Mestrado 2.042; Doutorado 361 docentes.</p>
+
+    <section class="summary-section mt-5">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="summary-card">
+            <div class="summary-icon"><i class="bi bi-people-fill"></i></div>
+            <h5>Matrículas</h5>
+            <p>≈ 2,2 milhões</p>
+            <small>Estabilidade entre 2021 e 2023, com leve queda na rede estadual.</small>
+            <canvas id="graficoMatriculas" height="100"></canvas>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="summary-card">
+            <div class="summary-icon"><i class="bi bi-building-fill"></i></div>
+            <h5>Escolas</h5>
+            <p>1.060 ativas</p>
+            <small>Todas as unidades estaduais devidamente mapeadas pela SEE/PE.</small>
+            <canvas id="graficoEscolas" height="100"></canvas>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="summary-card">
+            <div class="summary-icon"><i class="bi bi-mortarboard-fill"></i></div>
+            <h5>Professores</h5>
+            <p>36.639 totais</p>
+            <small>Predomínio de efetivos, com alta qualificação e especialização.</small>
+            <canvas id="graficoDocentes" height="100"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Indicadores da Educação - Pernambuco</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+
+    new Chart(document.getElementById('graficoMatriculas').getContext('2d'), {
+      type: 'line',
+      data: {
+        labels: ['Jan','Fev','Mar','Abr','Mai','Jun'],
+        datasets: [{ 
+          label:'Matrículas', 
+          data:[1200,1900,3000,2500,2800,3500], 
+          borderColor:'#0d6efd', 
+          backgroundColor:'rgba(13,110,253,0.2)', 
+          fill:true, tension:0.3 
+        }]
+      },
+      options:{ responsive:true, plugins:{ legend:{ display:false } }, scales:{ y:{ beginAtZero:true }, x:{ grid:{ display:false } } } }
+    });
+
+    new Chart(document.getElementById('graficoEscolas').getContext('2d'), {
+      type: 'bar',
+      data: {
+        labels: ['2020','2021','2022','2023'],
+        datasets: [{
+          label: 'Escolas Ativas',
+          data: [1050, 1060, 1062, 1060],
+          backgroundColor: '#6610f2'
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: { legend: { display: false } },
+        scales: {
+          y: { beginAtZero: true, title: { display: true, text: 'Número de Escolas' } },
+          x: { grid: { display:false } }
+        }
+      }
+    });
+
+    new Chart(document.getElementById('graficoDocentes').getContext('2d'), {
+      type: 'line',
+      data: {
+        labels: ['2020','2021','2022','2023'],
+        datasets: [{ 
+          label:'Docentes', 
+          data:[35200,36000,36700,36639], 
+          borderColor:'#198754', 
+          backgroundColor:'rgba(25,135,84,0.2)', 
+          fill:true, tension:0.3 
+        }]
+      },
+      options:{ responsive:true, plugins:{ legend:{ display:false } }, scales:{ y:{ beginAtZero:true }, x:{ grid:{ display:false } } } }
+    });
+  </script>
+</body>
+</html>
