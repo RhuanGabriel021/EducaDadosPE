@@ -9,6 +9,12 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   <style>
+    /* Layout geral para o footer colar no fim */
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
 
     .navbar-custom {
       background: linear-gradient(90deg, #0d6efd, #6610f2);
@@ -69,8 +75,9 @@
       color: white;
       text-align: center;
       padding: 25px 0;
-      margin-top: 60px;
+      
       font-weight: 500;
+      margin-top: auto; /* empurra pro final da página */
     }
   </style>
 </head>

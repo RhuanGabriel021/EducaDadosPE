@@ -8,6 +8,12 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
+    /* Layout geral para manter o footer no fim da tela */
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
     
     .navbar-custom {
       background: linear-gradient(90deg, #0d6efd, #6610f2);
@@ -68,7 +74,7 @@
       text-align: center;
       padding: 1rem 0;
       font-weight: 500;
-      margin-top: 60px;
+      margin-top: auto; /* cola no final da página */
     }
   </style>
 </head>
